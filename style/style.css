@@ -1,0 +1,149 @@
+body { 
+  display: grid;
+  grid-template-areas: 
+    "nav header header"
+    "nav article article"
+    "nav article article";
+  grid-template-rows: 70px 1fr 1fr;
+  grid-template-columns: 60px 1fr 1fr;
+  height: 100vh;
+  margin: 0;
+  }
+body>*:first-child{
+  grid-area: header;
+}
+body>*:nth-child(2){
+  grid-area: nav;
+  background: #1D0930;
+}
+body>*:last-child{ 
+  grid-area: article;      
+}
+nav .block-arrow {
+  background: #372943;
+  padding: 18px;
+  padding-top: 20px;
+  height: 70px;
+  position: relative;
+}
+nav .block-arrow::after {
+  content: ''; 
+  position: absolute;
+  left: -4px;
+  bottom: -53px;
+  border: 32px solid transparent;
+  border-top: 22px solid #372943; 
+}
+nav .block-arrow i{
+  color: #6A6B7C;
+  margin-top: 60px;
+  font-size: 25px;
+}
+nav>*:nth-child(2){
+  margin-top: 45px;
+}
+.navbar{
+  padding-left:18px;
+  margin-top:38px;
+}
+.navbar i{
+  font-size: 23px;
+}
+.navbar-icons__color{
+  color: #6A6B7C;
+  cursor: pointer;
+}
+.navbar-icons__color:hover{
+  color: #62CEC5;
+}
+nav>*:last-child{
+  margin-top: 180px;
+}
+header{
+  border-bottom: 2px solid #62CEC5;
+}
+header div{
+  height:40px;
+  width:90px;
+  padding:10px;
+}
+header div>*:first-child{
+  text-transform: uppercase;
+  color:#9191A0;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+header h3{
+  margin-top:5;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+article{
+  background: #F9F9F9;
+}
+article>*:first-child{
+  width:500px;
+  height:550px;
+  position:absolute;
+  left:45%;
+  top:34%;
+  margin:-150px 0 0 -150px;
+  border:2px solid #D5D9DC;
+  border-radius: 4px;
+  background: #fff;
+  font-family: sans-serif;
+}
+.form{
+  padding:20px;
+  padding-left:30px;
+}
+.header-form>*:first-child{
+  font-size: 20px;
+  font-family: sans-serif;
+  padding-bottom:10px;
+}
+.header-form>*:nth-child(3){
+  margin-top:10px;
+  color: gray;
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+input{
+  margin-top:10px;
+  width:440px;
+  height:40px;
+  padding-left:10px;
+  margin-bottom: 20px;
+  border: 1px solid #D5D9DC;
+  border-radius: 4px;
+}
+.main-form{
+  height:80px;
+  width:470px;
+  border-bottom:2px solid #D5D9DC;
+  border-top:2px solid #D5D9DC;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+.footer-form{
+  padding-left: 33px;
+  padding-top: 16px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color:red;
+}
+article>*:last-child{
+  height:50px;
+  width:50px;
+  background:#372943;
+  border-radius: 50%;
+  position: absolute;
+  right:15;
+  bottom:15;
+}
+.circle-chat{
+  padding: 8px;
+  color: white;
+}
+
+
