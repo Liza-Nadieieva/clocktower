@@ -1,0 +1,41 @@
+.navbar{
+	grid-area: nav;
+  background: #1D0930;
+}
+.arrow {
+  background: #372943;
+  padding: 18px;
+  padding-left: 14px;
+  padding-top: 20px;
+  height: 70px;
+  position: relative;
+}
+.arrow::after {
+  content: ''; 
+  position: absolute;
+  left: -4px;
+  bottom: -53px;
+  border: 32px solid transparent;
+  border-top: 22px solid #372943; 
+}
+.navbar_item{
+	border-left:1px solid green;
+  margin-top: 60px;
+  width:25px;
+  padding-left: 4px;
+}
+/*.arrow div.active{
+	border-left:1px solid green !important;
+	/*text-decoration: none;*/
+	
+.navbar_icon{
+  color: #6A6B7C;
+  cursor: pointer;
+  font-size: 23px;
+}
+.navbar_icon:hover{
+	color: #62CEC5;
+}
+
+
+
