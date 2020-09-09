@@ -5,29 +5,24 @@
 .arrow {
   background: #372943;
   padding: 18px;
-  padding-left: 14px;
+  padding-left: 10px;
   padding-top: 20px;
   height: 70px;
   position: relative;
 }
 .arrow::after {
-  content: ''; 
+  content: '';
   position: absolute;
   left: -4px;
   bottom: -53px;
   border: 32px solid transparent;
-  border-top: 22px solid #372943; 
+  border-top: 22px solid #372943;
 }
-.navbar_item{
-	border-left:1px solid green;
+.navbar_item1{
   margin-top: 60px;
-  width:25px;
-  padding-left: 4px;
+  width:35px;
+  padding-left:8px;
 }
-/*.arrow div.active{
-	border-left:1px solid green !important;
-	/*text-decoration: none;*/
-	
 .navbar_icon{
   color: #6A6B7C;
   cursor: pointer;
@@ -36,6 +31,39 @@
 .navbar_icon:hover{
 	color: #62CEC5;
 }
+.navbar_item1 a.active, .navbar_item2 a.active, .navbar_item3 a.active{
+  border-left: 3px solid #62CEC5;
+  padding-left: 13px;
+  margin-left: -16px;
+  padding-top:3px;
+}
+.navbar_item2 a.active{
+  margin-left:-18px;
+  padding-left: 15px;
+}
+.navbar_item1 a.active svg, .navbar_item2 a.active svg, .navbar_item3 a.active svg{
+  color: #62CEC5 !important;
+}
+.navbar_item2{
+  margin-top: 20px;
+  padding-left: 5px;
+}
+.navbar_elem1{
+  border-top: 1px solid #6A6B7C;
+  border-bottom: 1px solid #6A6B7C;
+  padding-bottom: 25px;
+  margin-top: 40px;
+  width:30px;
+  margin-left:14px;
+}
+.navbar_item3{
+  margin-top: 20px;
+  padding-left: 18px;
+}
+.navbar_elem2{
+  margin-top: 200px;
+}
+
 
 
 
