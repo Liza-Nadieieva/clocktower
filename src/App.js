@@ -8,9 +8,9 @@ import {Route, Redirect} from 'react-router-dom';
 function App(props) {
   return (
     <div className='container-wrapper'>
-      <Header/>
       <Navbar/>
       <div className='wrapper-content'>
+        <Route path='/header' component={Header} />
         <Route path='/content' component={Content} />
         <Redirect from='/' to='/'/>
       </div>
