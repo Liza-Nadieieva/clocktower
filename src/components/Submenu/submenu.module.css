@@ -1,0 +1,13 @@
+.menu{
+  width:250px;
+  display: block;
+}
+.block{
+  width: 250px;
+  position: absolute;
+  height: 100%;
+  margin-left: 60px;
+  background: yellow;
+  z-index:2;
+
+}
