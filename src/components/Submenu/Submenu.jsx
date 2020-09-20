@@ -1,12 +1,13 @@
 import React from 'react';
-import classes from './submenu.module.css';
-
+import './styles.less';
 
 const Submenu = ({isOpen}) => {
   return(
-    <div className={classes.menu}>
+    <div className='menu'>
       { isOpen &&
-      <div className={classes.block}> bhbshbjbc sbdjd </div>
+
+           <div> bhbshbjbc sbdjd </div>
+
       }
     </div>
   )

@@ -6,14 +6,6 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
   },
-  {
-    test: /\.less$/,
-    use: [
-        { loader: 'style-loader' },
-        { loader: 'css-loader' },
-        { loader: 'less-loader' }
-    ]
-  },
   resolve: {
     modules: [path.join(__dirname, 'src'), 'node_modules'],
     alias: {
@@ -22,29 +14,41 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
+            {
+              test: /\.jsx?$/,
+              loader: 'babel-loader'
+            },
+            {
+              test: /\.less$/,
+              use: [
+                  { loader: 'style-loader' },
+                  { loader: 'css-loader' },
+                  { loader: 'less-loader' }
+              ]
+            },
+            {
+              test: /\.(js|jsx)$/,
+              exclude: /node_modules/,
+              use: {
+                loader: 'babel-loader',
+              },
+            },
+            {
+              test: /\.css$/,
+              use: [
+                {
+                  loader: 'style-loader',
+                },
+                {
+                  loader: 'css-loader',
+                },
+              ],
+            },
+          ],
         },
-      },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
+        plugins: [
+          new HtmlWebPackPlugin({
+            template: './src/index.html',
+          }),
         ],
-      },
-    ],
-  },
-  plugins: [
-    new HtmlWebPackPlugin({
-      template: './src/index.html',
-    }),
-  ],
-};
+      };
