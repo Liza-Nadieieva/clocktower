@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe, faBars, faBookmark, faCut, faBell, faCompass, faCog, faQuestion } from '@fortawesome/free-solid-svg-icons';
 import {NavLink} from 'react-router-dom';
 import SubmenuContainer from '../Submenu/SubmenuContainer.jsx';
+import './style.less';
 
 
 class Navbar extends Component{
@@ -30,7 +31,7 @@ class Navbar extends Component{
 						<div className={classes.tooltip}>
 							<span className={classes.tooltiptext}>Spaces&#160;Tracky Test </span>
 								<NavLink ref={this.navbarRef} to='/spaces' activeClassName={classes.active} onClick={this.state.isOpen ? this.closeSubmenu : this.openSubmenu}>
-									<FontAwesomeIcon icon={faGlobe} className={classes.navbar_icon} />
+									<FontAwesomeIcon icon={faGlobe} className={classes.navbar_icon} className='blah'/>
 								</NavLink>
 						</div>
 					</div>
