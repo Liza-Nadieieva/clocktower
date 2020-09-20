@@ -6,6 +6,14 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
   },
+  {
+    test: /\.less$/,
+    use: [
+        { loader: 'style-loader' },
+        { loader: 'css-loader' },
+        { loader: 'less-loader' }
+    ]
+  },
   resolve: {
     modules: [path.join(__dirname, 'src'), 'node_modules'],
     alias: {

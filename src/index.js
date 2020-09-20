@@ -1,6 +1,14 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import {BrowserRouter} from 'react-router-dom';
+import App from './App';
 import { render } from 'react-dom';
 
-import HelloWorld from './HelloWorld';
 
-render(<HelloWorld />, document.getElementById('root'));
+render(
+  <BrowserRouter>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </BrowserRouter>, document.getElementById('root'));
