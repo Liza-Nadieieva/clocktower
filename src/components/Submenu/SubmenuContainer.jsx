@@ -27,8 +27,7 @@ class SubmenuContainer extends Component {
     return (
       <div ref={this.submenuRef}>
         <div>
-          <Submenu isOpen={this.props.isOpen}>
-          </Submenu>
+          <Submenu isOpen={this.props.isOpen}/>
         </div>
       </div>
     );
