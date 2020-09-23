@@ -1,13 +1,40 @@
+@menu-width: 270px;
+@border-color: #DBDDE1;
+
 .menu{
   display: block;
-  @menu-width: 250px;
-  div{
-    width: @menu-width;
-    position: absolute;
-    height: 100%;
+}
+.submenu {
+  position: absolute;
+  z-index: -1;
+  background: #fff;
+  height: 100%;
+  width: @menu-width;
+  border:2px solid @border-color;
+  color:#2D2F42;
+  font-weight: lighter;
+
+  &.closed {
+    margin-left: -215px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &.open {
     margin-left: 60px;
-    background: yellow;
-    z-index:2;
+    transition: all 0.5s ease-in-out;
+  }
+  .header {
+    border-bottom: 2px solid @border-color;
+    padding-left: 15px;
+    font-family: sans-serif;
+  }
+  .links {
+    padding-left:15px;
+    padding-top:15px;
+    line-height: 2em;
   }
 }
+
+
+
 

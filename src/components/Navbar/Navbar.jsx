@@ -5,6 +5,7 @@ import { faGlobe, faBars, faBookmark, faCut, faBell, faCompass, faCog, faQuestio
 import {NavLink} from 'react-router-dom';
 import SubmenuContainer from '../Submenu/SubmenuContainer.jsx';
 
+
 class Navbar extends Component{
 	state = {
     isOpen: false
@@ -15,7 +16,6 @@ class Navbar extends Component{
 
   closeSubmenu = () => {
     this.setState({ isOpen: false });
-    console.log(this.state.isOpen)
   }
 
   navbarRef = React.createRef();
@@ -28,7 +28,7 @@ class Navbar extends Component{
 					<div className={classes.navbar_item1}>
 						<div className={classes.tooltip}>
 							<span className={classes.tooltiptext}>Spaces&#160;Tracky Test </span>
-								<NavLink ref={this.navbarRef} to='/spaces' activeClassName={classes.active} onClick={this.state.isOpen ? this.closeSubmenu : this.openSubmenu}>
+								<NavLink to='/spaces' ref={this.navbarRef} activeClassName={classes.active} onClick={this.state.isOpen ? this.closeSubmenu : this.openSubmenu}>
 									<FontAwesomeIcon icon={faGlobe} className={classes.navbar_icon} />
 								</NavLink>
 						</div>
@@ -62,7 +62,7 @@ class Navbar extends Component{
 					<div className={classes.navbar_item2}>
 						<div className={classes.tooltip}>
 							<span className={classes.tooltiptext}>SQL&#160;Alerts</span>
-							<NavLink to='/bell' activeClassName={classes.active}>
+							<NavLink to='/bell'activeClassName={classes.active}>
 								<FontAwesomeIcon icon={faBell} className={classes.navbar_icon}/>
 							</NavLink>
 						</div>
